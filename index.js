@@ -161,7 +161,7 @@ morgan.format('common', ':remote-addr - :remote-user [:date[clf]] ":method :url 
  * Default format.
  */
 
-morgan.format('default', ':remote-addr - :remote-user [:date] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"')
+morgan.format('default', ':remote-addr - :remote-user [:date] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent" :params')
 deprecate.property(morgan, 'default', 'default format: use combined format')
 
 /**
@@ -341,6 +341,14 @@ morgan.token('req', function getRequestToken (req, res, field) {
   return Array.isArray(header)
     ? header.join(', ')
     : header
+})
+
+/**
+ * request parameters
+ */
+
+morgan.token('params', function getParamsToken (req) {
+  return JSON.stringify(req.params)
 })
 
 /**

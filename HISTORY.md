@@ -1,3 +1,15 @@
+unreleased
+==========
+
+  * Add `:params` token to include request parameters in log output
+  * Update default format to include `:params` token
+
+1.10.0 / 2019-06-10
+===================
+
+  * Add `:total-time` token
+  * Fix `morgan.compile` to inherit `format` object
+
 1.10.0 / 2020-03-20
 ===================
 

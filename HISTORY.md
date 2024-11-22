@@ -1,4 +1,10 @@
-1.10.0 / 2020-03-20
+1.11.0 / 2023-05-24
+===================
+
+  * Add `:params` token for logging request parameters
+  * Include `:params` token in default log format
+
+1.10.0 / 2019-06-10
 ===================
 
   * Add `:total-time` token

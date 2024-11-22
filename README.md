@@ -129,6 +129,14 @@ for information codes.
 :method :url :status :response-time ms - :res[content-length]
 ```
 
+##### default
+
+Standard output including request parameters.
+
+```
+:remote-addr - :remote-user [:date] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent" :params
+```
+
 ##### short
 
 Shorter than default, also including response time.
@@ -237,6 +245,10 @@ The URL of the request. This will use `req.originalUrl` if exists, otherwise `re
 ##### :user-agent
 
 The contents of the User-Agent header of the request.
+
+##### :params
+
+The request parameters as a JSON string.
 
 ### morgan.compile(format)
 
